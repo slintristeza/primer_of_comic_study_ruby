@@ -1,10 +1,7 @@
+# frozen_string_literal: true
+
 pen_down
-forward 100
-turn_left 72
-forward 100
-turn_left 72
-forward 100
-turn_left 72
-forward 100
-turn_left 72
-forward 100
+5.times do
+  forward 100
+  turn_left 72
+end
