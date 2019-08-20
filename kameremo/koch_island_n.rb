@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def draw_koch(n, length)
   if n == 0
     forward(length)
@@ -17,6 +19,6 @@ turn_right 30
 pen_down
 
 3.times do
-  draw_koch(5, 270) 
+  draw_koch(5, 270)
   turn_right 120
 end
