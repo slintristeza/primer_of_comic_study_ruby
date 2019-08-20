@@ -15,4 +15,4 @@ end
 move_to 0, 140
 pen_down
 
-forward 250
+draw_tree 250
