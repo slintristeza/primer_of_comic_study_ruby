@@ -36,12 +36,20 @@ end
 move_to(0, 180)
 turn_right 90
 pen_down
-color "red"
+color 'red'
 draw_round(350)
 pen_up
 
-move_to(0, 180)
+move_to(-150, -80)
 pen_down
-color "yellow"
-draw_koch(5, 348)
+color 'yellow'
+3.times do
+  draw_koch(5, 300)
+  turn_right 120
+end
 pen_up
+
+move_to(-50, -20)
+pen_down
+color 'green'
+draw_dragon(10, 140)
