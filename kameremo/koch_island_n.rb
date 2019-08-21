@@ -1,5 +1,12 @@
 # frozen_string_literal: true
 
+def draw_round(n)
+  n.times do
+    forward(Math::PI * n / n)
+    turn_left (360 / n)
+  end
+end
+
 def draw_koch(n, length)
   if n == 0
     forward(length)
@@ -14,11 +21,29 @@ def draw_koch(n, length)
   end
 end
 
-move_to(-120, 80)
-turn_right 30
-pen_down
+def draw_dragon(n, length, reverse = false)
+  if n == 0
+    forward(length)
+  else
+    turn_right(reverse ? -45 : 45)
+    draw_dragon(n - 1, length / Math.sqrt(2))
+    turn_left(reverse ? -90 : 90)
+    draw_dragon(n - 1, length / Math.sqrt(2), true)
+    turn_right(reverse ? -45 : 45)
+  end
+end
 
+move_to(0, 180)
+turn_right 90
+pen_down
+color 'red'
+draw_round(350)
+pen_up
+
+move_to(-150, -80)
+pen_down
+color 'yellow'
 3.times do
-  draw_koch(5, 270)
+  draw_koch(5, 300)
   turn_right 120
 end

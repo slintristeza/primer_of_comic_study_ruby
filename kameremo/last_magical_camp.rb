@@ -38,3 +38,10 @@ turn_right 90
 pen_down
 color "red"
 draw_round(350)
+pen_up
+
+move_to(0, 180)
+pen_down
+color "yellow"
+draw_koch(5, 348)
+pen_up
