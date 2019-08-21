@@ -15,4 +15,4 @@ end
 move_to(-100, 0)
 turn_right 90
 pen_down
-draw_dragon(1, 100)
+draw_dragon(1, 200)
