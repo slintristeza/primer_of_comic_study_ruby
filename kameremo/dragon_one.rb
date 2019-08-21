@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def draw_dragon(n, length)
   if n == 0
     forward(length)
